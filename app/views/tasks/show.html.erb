@@ -6,5 +6,5 @@
   <p>The Task is not done</p>
 <% end %>
 <p><%= link_to "Return to All the tasks", tasks_path %> </p>
-
 <p><%= link_to "Edit this task", edit_task_path %></p>
+<p><%= link_to 'Remove this Task', task_path, data: {:confirm => 'Are you sure?'}, :method => :delete %></p>

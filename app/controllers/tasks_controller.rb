@@ -24,12 +24,18 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
     @task.update(task_params_edit)
-    if params[:task][:completed] == "0"
-      puts "The task is not done"
+    if params[:task][:completed] == '0'
+      puts 'The task is not done'
     else
-      puts "The task is done"
+      puts 'The task is done'
     end
     redirect_to task_path(@task)
+  end
+
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to tasks_path
   end
 
   private
