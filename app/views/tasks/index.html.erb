@@ -1,9 +1,12 @@
-<h1>My task Manager by @Gaudou</h1>
-<ul>
-  <% Task.all.each do |task| %>
-     <li><%= link_to "#{task.title}", task_path(task) %></li>
-  <% end %>
-</ul>
-<p><%= link_to "Add a new task", tasks_new_path %></p>
+<div class="container p-2">
+  <h1>My task Manager by @Gaudou</h1>
+  <ul>
+    <% Task.all.each do |task| %>
+       <li class="alert alert-info"><%= link_to "#{task.title}", task_path(task) %></li>
+    <% end %>
+  </ul>
+  <a class="btn btn-primary" href=""><%= link_to "Add a new task", tasks_new_path %>Add a New task</a>
+</div>
+
 
 

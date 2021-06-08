@@ -1,12 +1,13 @@
-<h1>Edit a current task</h1>
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed %>
-  <%= f.check_box :completed %>
-  <%= f.submit %>
-<% end %>
-
+<div class="container p-2 ">
+  <h1>Edit a current task</h1>
+  <%= form_for(@task) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+    <%= f.submit %>
+  <% end %>
+</div>
 
