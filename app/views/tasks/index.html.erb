@@ -1,1 +1,7 @@
 <h1>My task Manager by @Gaudou</h1>
+<ul>
+  <% Task.all.each do |task| %>
+    <li> <%= task.title %> </li>
+  <% end %>
+</ul>
+
